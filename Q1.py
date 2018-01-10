@@ -65,6 +65,7 @@ class Debt:
         )
 
 def partatest():
+    print("\n-- 1(a) --")
     interest = float(input("Interest percentage: "))
     interest = interest/100
     repayment = float(input("Repayment percentage: "))
@@ -73,35 +74,37 @@ def partatest():
     baserepayment = 50
     thisdebt = Debt(debt=thisdebt, interest=interest, repayment=repayment, baserepayment=baserepayment)
     thisdebt.simulate()
-    return str(thisdebt)
+    print("\n" + str(thisdebt))
 
 def partbtest():
+    print("\n-- 1(b) --")
     interest = 0.43
     repayment = 0.46
     thisdebt = 100
     baserepayment = 50
     thisdebt = Debt(debt=thisdebt, interest=interest, repayment=repayment, baserepayment=baserepayment)
     thisdebt.simulate()
-    return str(thisdebt)
+    print(str(thisdebt))
 
 def partctest():
+    print("\n-- 1(c) --")
     interest = 1
     repayment = 0.51
     thisdebt = 100
     baserepayment = 50
     thisdebt = Debt(debt=thisdebt, interest=interest, repayment=repayment, baserepayment=baserepayment)
     thisdebt.simulate()
-    return str(thisdebt)
+    print(str(thisdebt))
 
 # 1(a)
 #   Demonstrates the program in operation with user inputs.
-print("-- 1(a) --\n", partatest())
+partatest()
 
 # 1(b)
 #   Simulates debt at 43% interest and 46% repayment
-print("\n-- 1(b) --\n", partbtest())
+partbtest()
 
 # 1(c)
 #   Simulates debt at 100% interest and 51% repayment
 #   This is the largest possible interest with the lowest possible repayment rate.
-print("\n-- 1(c) --\n", partctest())
+partctest()
